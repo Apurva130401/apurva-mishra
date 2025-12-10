@@ -20,12 +20,13 @@ export default function Home() {
   const handleLoadComplete = () => {
     setLoading(false);
     setTimeout(() => {
+      const isMobile = window.innerWidth < 768;
       addToast({
         title: "Command Center Online",
-        description: "Right-click anywhere to access tools",
+        description: isMobile ? "Hold anywhere to access tools" : "Right-click anywhere to access tools",
         type: "info",
         duration: 5000,
-        action: <span className="text-[10px] bg-white/10 px-1.5 py-0.5 rounded border border-white/10">⌘ + Click</span>
+        action: isMobile ? undefined : <span className="text-[10px] bg-white/10 px-1.5 py-0.5 rounded border border-white/10">⌘ + Click</span>
       });
     }, 500);
   };
