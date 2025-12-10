@@ -8,7 +8,8 @@ import {
     Mail,
     RefreshCw,
     Code,
-    Zap
+    Zap,
+    Copy
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -67,6 +68,29 @@ export const ContextMenu = () => {
     const itemVariants = {
         hidden: { opacity: 0, y: 10, filter: "blur(5px)" },
         visible: { opacity: 1, y: 0, filter: "blur(0px)" }
+    };
+
+    const handleCopy = () => {
+        const selection = window.getSelection()?.toString();
+        if (selection) {
+            navigator.clipboard.writeText(selection);
+            addToast({
+                title: "Copied",
+                description: "Selection copied",
+                type: "success",
+                duration: 2000
+            });
+        } else {
+            // Fallback to copying URL if no text is selected
+            navigator.clipboard.writeText(window.location.href);
+            addToast({
+                title: "Link Copied",
+                description: "Page URL copied",
+                type: "success",
+                duration: 2000
+            });
+        }
+        setVisible(false);
     };
 
     const handleCopyEmail = () => {
@@ -146,6 +170,27 @@ export const ContextMenu = () => {
 
                     {/* Action List */}
                     <div className="flex flex-col gap-1 px-1">
+                        <motion.button
+                            variants={itemVariants}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                handleCopy();
+                            }}
+                            className="w-full flex items-center justify-between p-2.5 rounded-lg hover:bg-white/10 text-stone-300 hover:text-white group transition-all duration-200"
+                        >
+                            <div className="flex items-center gap-3">
+                                <span className="opacity-70 group-hover:opacity-100 transition-opacity">
+                                    <Copy className="w-4 h-4" />
+                                </span>
+                                <span className="text-sm font-medium font-[family-name:var(--font-supreme)]">
+                                    Copy
+                                </span>
+                            </div>
+                            <span className="text-[10px] bg-white/5 px-1.5 py-0.5 rounded text-stone-500 border border-white/5 transition-colors group-hover:bg-white/10">
+                                ⌘C
+                            </span>
+                        </motion.button>
+
                         <motion.button
                             variants={itemVariants}
                             onClick={(e) => {
