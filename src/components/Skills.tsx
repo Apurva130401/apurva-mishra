@@ -17,6 +17,47 @@ const skillCategories = [
     }
 ];
 
+const MobileSkills = () => {
+    return (
+        <section className="relative bg-white py-16">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-8">
+                    <h2 className="text-3xl font-bold mb-2 text-stone-900">
+                        Technical Stack
+                    </h2>
+                    <p className="text-sm text-stone-500 max-w-xs mx-auto">
+                        Swipe to explore
+                    </p>
+                </div>
+
+                <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 -mx-4 px-4 scrollbar-hide">
+                    {skillCategories.map((category, index) => (
+                        <div
+                            key={index}
+                            className="snap-center flex-shrink-0 w-[85vw] p-6 rounded-2xl border border-stone-200 bg-[#FAFAF9] shadow-sm"
+                        >
+                            <h3 className="text-xl font-bold text-stone-900 mb-4 border-b border-stone-100 pb-2">
+                                {category.title}
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                                {category.skills.map((skill) => (
+                                    <span
+                                        key={skill}
+                                        className="px-3 py-1.5 rounded-lg bg-white border border-stone-200 text-stone-600 text-xs font-medium shadow-sm"
+                                    >
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                    <div className="w-1 flex-shrink-0" />
+                </div>
+            </div>
+        </section>
+    );
+};
+
 export const Skills = () => {
     return (
         <section id="skills" className="py-24 bg-white relative">
@@ -27,7 +68,7 @@ export const Skills = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16"
+                    className="hidden md:block text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 text-stone-900">
                         Technical Stack
@@ -37,7 +78,8 @@ export const Skills = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Desktop Grid */}
+                <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
                     {skillCategories.map((category, index) => (
                         <motion.div
                             key={index}
@@ -63,6 +105,12 @@ export const Skills = () => {
                         </motion.div>
                     ))}
                 </div>
+
+
+            </div>
+            {/* Full width container for sticky scroll outside the constrained container */}
+            <div className="md:hidden">
+                <MobileSkills />
             </div>
         </section>
     );

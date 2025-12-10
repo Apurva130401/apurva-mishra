@@ -39,6 +39,58 @@ const projects = [
     }
 ];
 
+const MobileProjects = () => {
+    return (
+        <section className="relative bg-[#FAFAF9] py-16">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-8">
+                    <h2 className="text-3xl font-bold mb-2 text-stone-900">
+                        Featured Projects
+                    </h2>
+                    <p className="text-sm text-stone-500 max-w-xs mx-auto">
+                        Swipe to view all
+                    </p>
+                </div>
+
+                <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 -mx-4 px-4 scrollbar-hide">
+                    {projects.map((project, index) => (
+                        <div
+                            key={index}
+                            className={`snap-center flex-shrink-0 w-[85vw] h-[55vh] rounded-3xl overflow-hidden border border-stone-200 bg-gradient-to-br ${project.gradient} shadow-lg`}
+                        >
+                            <div className="relative z-20 h-full flex flex-col justify-between p-6">
+                                <div className="flex justify-between items-start">
+                                    <div className="p-3 bg-white rounded-2xl shadow-sm">
+                                        <div className="w-8 h-8 rounded-full bg-stone-900" />
+                                    </div>
+                                    <Link href={project.link} className="p-3 rounded-full bg-white text-stone-900 shadow-sm">
+                                        <ExternalLink className="w-5 h-5" />
+                                    </Link>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-2xl font-bold text-stone-900 mb-2">{project.title}</h3>
+                                    <p className="text-stone-600 mb-4 text-base line-clamp-3">
+                                        {project.description}
+                                    </p>
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.tags.map(tag => (
+                                            <span key={tag} className="text-xs font-semibold px-2.5 py-1 rounded-full bg-white text-stone-800 border border-stone-100 shadow-sm">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                    <div className="w-1 flex-shrink-0" />
+                </div>
+            </div>
+        </section>
+    );
+};
+
 export const Projects = () => {
     return (
         <section id="projects" className="py-24 relative bg-[#FAFAF9]">
@@ -47,7 +99,7 @@ export const Projects = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16"
+                    className="hidden md:block text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 text-stone-900">
                         Featured Projects
@@ -57,7 +109,8 @@ export const Projects = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[350px]">
+                {/* Desktop Grid */}
+                <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[350px]">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
@@ -94,6 +147,13 @@ export const Projects = () => {
                         </motion.div>
                     ))}
                 </div>
+
+
+            </div>
+
+            {/* Mobile Projects Sticky Container */}
+            <div className="md:hidden">
+                <MobileProjects />
             </div>
         </section>
     );

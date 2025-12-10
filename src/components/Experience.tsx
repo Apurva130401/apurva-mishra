@@ -57,25 +57,25 @@ const experiences = [
 
 const ExperienceItem = ({ experience, index }: { experience: any; index: number }) => {
     return (
-        <div className="flex flex-row items-center w-full min-h-screen py-24 relative z-10">
+        <div className="flex flex-col md:flex-row items-start md:items-center w-full py-12 md:py-24 relative z-10 md:min-h-screen">
             {/* Left Side (45% width): Company Name */}
-            <div className="w-[45%] flex justify-end items-center pr-16">
+            <div className="w-full md:w-[45%] flex justify-start md:justify-end items-center pl-16 md:pl-0 pr-0 md:pr-16 mb-4 md:mb-0">
                 <motion.h2
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: false, margin: "-20%" }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-6xl md:text-8xl lg:text-9xl font-black text-right leading-[0.85] tracking-tighter"
+                    className="text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-black text-left md:text-right leading-[0.9] tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-900 dark:from-gray-100 dark:to-gray-500"
                 >
                     {experience.company}
                 </motion.h2>
             </div>
 
-            {/* Spacer for Center Line */}
-            <div className="w-[10%]"></div>
+            {/* Spacer for Center Line - Desktop Only */}
+            <div className="hidden md:block w-[10%]"></div>
 
             {/* Right Side (45% width): Role and Description */}
-            <div className="w-[45%] flex flex-col justify-center pl-16">
+            <div className="w-full md:w-[45%] flex flex-col justify-center pl-16 md:pl-16 relative">
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -89,17 +89,17 @@ const ExperienceItem = ({ experience, index }: { experience: any; index: number 
                         </span>
                     </div>
 
-                    <h3 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+                    <h3 className="text-2xl md:text-5xl font-bold mb-4 md:mb-8 leading-tight">
                         {experience.title}
                     </h3>
 
-                    <p className="text-lg md:text-xl leading-relaxed max-w-xl mb-10 font-light opacity-80">
+                    <p className="text-base md:text-xl leading-relaxed max-w-xl mb-6 md:mb-10 font-light opacity-80">
                         {experience.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-2 md:gap-3">
                         {experience.tags.map((tag: string) => (
-                            <span key={tag} className="px-4 py-2 text-sm border bg-opacity-10 rounded-full transition-colors duration-300 border-current opacity-70 hover:opacity-100">
+                            <span key={tag} className="px-3 py-1 md:px-4 md:py-2 text-xs md:text-sm border bg-opacity-10 rounded-full transition-colors duration-300 border-current opacity-70 hover:opacity-100">
                                 {tag}
                             </span>
                         ))}
@@ -172,12 +172,12 @@ export const Experience = () => {
             </div>
 
             {/* Continuous Vertical Line Container */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-300 dark:bg-gray-700 -translate-x-1/2 h-full z-0 opacity-20"></div>
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gray-300 dark:bg-gray-700 -translate-x-1/2 h-full z-0 opacity-20"></div>
 
             {/* Filling Green Line */}
             <motion.div
                 style={{ height: lineHeight }}
-                className="absolute left-1/2 top-0 w-px bg-green-500 -translate-x-1/2 z-0 origin-top"
+                className="absolute left-8 md:left-1/2 top-0 w-px bg-green-500 -translate-x-1/2 z-0 origin-top"
             />
 
             <div className="w-full max-w-[90%] mx-auto relative z-10">
