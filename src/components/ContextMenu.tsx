@@ -59,7 +59,7 @@ export const ContextMenu = () => {
                 duration: 0.2,
                 ease: "circOut",
                 staggerChildren: 0.05
-            }
+            } as any
         },
         exit: { opacity: 0, scale: 0.95, y: 10, transition: { duration: 0.15 } }
     };
@@ -228,8 +228,8 @@ export const ContextMenu = () => {
 
                     {/* Footer */}
                     <motion.div variants={itemVariants} className="mt-2 pt-2 border-t border-white/10 px-2 text-center">
-                        <p className="text-[10px] text-stone-600 font-[family-name:var(--font-space-grotesk)]">
-                            System Online • v1.0.4
+                        <p className="text-[10px] text-white/50 font-[family-name:var(--font-space-grotesk)]">
+                            Developed by Apurva
                         </p>
                     </motion.div>
                 </motion.div>
