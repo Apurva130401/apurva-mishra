@@ -8,11 +8,11 @@ interface PreloaderProps {
 }
 
 export default function Preloader({ onComplete }: PreloaderProps) {
-    const [text, setText] = useState("Hello");
+    const [text, setText] = useState("Welcome");
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setText("Welcome");
+            setText("System Initialized");
         }, 1200);
 
         const completeTimer = setTimeout(() => {

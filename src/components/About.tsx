@@ -46,7 +46,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
     return (
         <div className="parallax overflow-hidden m-0 whitespace-nowrap flex flex-nowrap">
-            <motion.div className="scroller font-[family-name:var(--font-clash)] font-[305] text-4xl md:text-6xl text-black flex whitespace-nowrap flex-nowrap" style={{ x }}>
+            <motion.div className="scroller font-[family-name:var(--font-clash)] font-[405] text-4xl md:text-6xl text-black flex whitespace-nowrap flex-nowrap" style={{ x }}>
                 <span className="block mr-8">{children} </span>
                 <span className="block mr-8">{children} </span>
                 <span className="block mr-8">{children} </span>
@@ -101,11 +101,12 @@ export const About = () => {
 
                     {/* Text Content */}
                     <div className="max-w-3xl text-center">
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-serif font-black text-stone-900 mb-6 tracking-tight leading-tight">
-                            Commerce Student turned <span className="text-orange-600">Web Developer</span>.
+                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-[family-name:var(--font-supreme)] font-[700] text-stone-900 mb-6 tracking-tight leading-tight">
+                            <span className="whitespace-nowrap">Commerce Background</span> <br />
+                            <span className="text-orange-600 whitespace-nowrap ml-10">Engineering Mindset</span>
                         </h2>
                         <p className="text-lg md:text-xl lg:text-2xl text-stone-700 font-medium leading-relaxed font-serif">
-                            I am a commerce student and self learned web developer and automations expert. I bridge the gap between business logic and technical execution.
+                            I combine financial acumen with AI-driven engineering to build systems that don't just work—they sell. I bridge the gap between ROI-focused business logic and rapid technical execution.
                         </p>
                     </div>
                 </div>

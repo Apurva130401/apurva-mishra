@@ -8,22 +8,50 @@ const experiences = [
         title: "Founder & Lead Developer",
         company: "SyncFlo",
         period: "2024 - Present",
-        description: "Spearheading the development of autonomous AI agents and enterprise automation workflows. Specialized in integrating LLMs with business logic to streamline operations and enhance productivity.",
-        tags: ["Next.js", "n8n", "LangChain", "RAG"]
+        description: "Designing and deploying intelligent WhatsApp and Voice AI agents using n8n and Google Gemini. Engineered scalable backend workflows integrated with Supabase and third-party APIs for real-time data sync. Built the company website using React and Node.js while managing end-to-end client onboarding systems.",
+        tags: ["Next.js", "n8n", "LangChain", "RAG", "React", "Supabase", "LLMs", "Node.js", "API"]
     },
     {
-        title: "Senior AI Developer",
+        title: "AI Automation Developer",
         company: "Freelance",
-        period: "2022 - 2024",
+        period: "2022 - Present",
         description: "Designed and deployed custom automation solutions for global clients. Optimized business processes using Python scripts, API integrations, and cloud-native architectures.",
         tags: ["Python", "Automation", "AWS", "API"]
     },
     {
-        title: "Full Stack Engineer",
-        company: "Tech Projects",
-        period: "2020 - 2022",
-        description: "Built responsive, high-performance web applications. Focused on component-driven architecture and seamless user experiences using modern JavaScript frameworks.",
-        tags: ["React", "Node.js", "TypeScript", "UI/UX"]
+        title: "E-Commerce Operations & Automation",
+        company: "Cinch Fashion",
+        period: "2022 - 2024",
+        description: "Customized a Shopify website using code to optimize product offerings and minimize costs. Implemented a WhatsApp API to automate customer order tracking and streamline marketing processes. Executed high-ROI ad campaigns that drove significant revenue growth within two months",
+        tags: ["Shopify Liquid", "WhatsApp API", "E-commerce", "Automation"]
+    },
+    {
+        title: "Marketing Associate & Web Contributor",
+        company: "Zoxima Solutions",
+        period: "2023 - 2024",
+        description: "Contributed significantly to the development of the company's prime website, Zoxprime. Managed targeted advertising campaigns on LinkedIn and Instagram to promote software products and webinars. Organized digital events and created compelling ad sets for software solutions",
+        tags: ["UI/UX", "Web Development", "LinkedIn Ads", "Lead Generation", "CRM"]
+    },
+    {
+        title: "Sales & Academic Consultant",
+        company: "Mentor Me Careers",
+        period: "2023 - 2024",
+        description: "Spearheaded the acquisition of over 100 contract manufacturers and design houses globally within three months. Utilized strategic planning and negotiation to secure agreements and expand market reach.",
+        tags: ["EdTech Sales", "Client Relations", "CRM Management"]
+    },
+    {
+        title: "Sales & Strategic Partnerships",
+        company: "Find Manufacturing LLC",
+        period: "2021 - 2022",
+        description: "Facilitated course enrollments and provided personalized career guidance to over 30 students. Coordinated live webinars and sessions to ensure high participation and student satisfaction.",
+        tags: ["B2B Sales", "Vendor Acquisition", "Negotiation"]
+    },
+    {
+        title: "Marketing & Operations",
+        company: "Upthrust Esports",
+        period: "2020 - 2021",
+        description: "Orchestrated large-scale tournament operations across India and South-East Asia using digital marketing channels. Analyzed marketing metrics to make data-driven adjustments for campaign optimization. Managed cross-functional teams to ensure seamless execution of events and brand visibility.",
+        tags: ["Data Analysis", "Event Operations", "Strategic Planning"]
     }
 ];
 

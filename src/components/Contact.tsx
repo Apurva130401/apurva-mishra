@@ -35,7 +35,7 @@ export const Contact = () => {
                             Email Me
                         </Link>
                         <Link
-                            href="https://www.linkedin.com/in/apurvamishra"
+                            href="https://www.linkedin.com/in/apurva-kr-mishra"
                             className="px-8 py-4 rounded-full bg-white text-stone-900 border border-stone-200 font-bold text-lg hover:border-stone-900 transition-all shadow-sm flex items-center gap-3"
                         >
                             <Linkedin className="w-5 h-5" />
@@ -44,7 +44,7 @@ export const Contact = () => {
                     </div>
 
                     <div className="flex justify-center gap-8 text-stone-400">
-                        <Link href="https://github.com/apurvamishra" className="hover:text-stone-900 transition-colors">
+                        <Link href="https://github.com/apurva130401" className="hover:text-stone-900 transition-colors">
                             <Github className="w-8 h-8" />
                         </Link>
                         <Link href="https://twitter.com/apurvamishra" className="hover:text-stone-900 transition-colors">
