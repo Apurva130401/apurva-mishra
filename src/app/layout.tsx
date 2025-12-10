@@ -17,6 +17,9 @@ const clashGrotesk = localFont({
 export const metadata: Metadata = {
   title: "Apurva Mishra | AI Automation Expert",
   description: "Senior AI Automation Developer specializing in building rigorous, agentic workflows and premium web experiences.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
