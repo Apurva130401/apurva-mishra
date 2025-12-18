@@ -13,7 +13,7 @@ const experiences = [
     },
     {
         title: "Founder & Lead Developer",
-        company: "SyncFlo",
+        company: "SyncFlo AI",
         period: "2024 - Present",
         description: "Designing and deploying intelligent WhatsApp and Voice AI agents using n8n and Google Gemini. Engineered scalable backend workflows integrated with Supabase and third-party APIs for real-time data sync. Built the company website using React and Node.js while managing end-to-end client onboarding systems.",
         tags: ["Next.js", "n8n", "LangChain", "RAG", "React", "Supabase", "LLMs", "Node.js", "API"]
@@ -34,7 +34,7 @@ const experiences = [
     },
     {
         title: "Marketing Associate & Web Contributor",
-        company: "Zoxima Solutions",
+        company: "Zoxima   Solutions",
         period: "2023 - 2024",
         description: "Contributed significantly to the development of the company's prime website, Zoxprime. Managed targeted advertising campaigns on LinkedIn and Instagram to promote software products and webinars. Organized digital events and created compelling ad sets for software solutions",
         tags: ["UI/UX", "Web Development", "LinkedIn Ads", "Lead Generation", "CRM"]
