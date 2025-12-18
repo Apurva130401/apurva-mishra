@@ -5,6 +5,13 @@ import { useRef } from "react";
 
 const experiences = [
     {
+        title: "Project & Developer",
+        company: "Mentrex",
+        period: "2025 - Present",
+        description: "Built an AI Coding Agent which can be used in various Code Editors like VS Code, JetBrains, and others. The agent is designed to assist developers in writing, debugging, and optimizing code.",
+        tags: ["RAG", "React", "Supabase", "LLMs", "VSIX", "API"]
+    },
+    {
         title: "Founder & Lead Developer",
         company: "SyncFlo",
         period: "2024 - Present",
