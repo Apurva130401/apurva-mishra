@@ -8,7 +8,7 @@ const experiences = [
         title: "Project & Developer",
         company: "Mentrex",
         period: "2025 - Present",
-        description: "Built an AI Coding Agent which can be used in various Code Editors like VS Code, JetBrains, and others. The agent is designed to assist developers in writing, debugging, and optimizing code.",
+        description: "Built and launched Mentrex, an AI-native coding assistant that operates across the CLI and major IDEs. Designed the core engine to handle autonomous coding tasks, including proactive bug fixing and architectural optimization",
         tags: ["RAG", "React", "Supabase", "LLMs", "VSIX", "API"]
     },
     {
