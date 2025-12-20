@@ -36,6 +36,14 @@ const projects = [
         link: "#",
         colSpan: "md:col-span-2",
         gradient: "from-stone-50 to-orange-50"
+    },
+    {
+        title: "Mentrex AI",
+        description: "AI Coding Assistant that works in various CLI and IDEs",
+        tags: ["VSIX", "JS", "Node.js"],
+        link: "https://mentrex.shop",
+        colSpan: "md:col-span-2",
+        gradient: "from-stone-50 to-orange-50"
     }
 ];
 
